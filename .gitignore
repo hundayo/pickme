@@ -1,5 +1,9 @@
 *.class
 *.jar
+.classpath
+.project
+
 pickme.iml
 
 target/
+.settings/
