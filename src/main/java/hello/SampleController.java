@@ -17,6 +17,7 @@ public class SampleController {
 
     public static void main(String[] args) throws Exception {
     	//TO_DO Test
+    	//이슈4
         //TO_DO
         SpringApplication.run(SampleController.class, args);
     }
