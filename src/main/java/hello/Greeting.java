@@ -3,6 +3,7 @@ package hello;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 
@@ -10,12 +11,13 @@ import javax.persistence.*;
 @Builder
 @AllArgsConstructor
 @Entity
+@NoArgsConstructor
 @Table(name = "greeting")
 public class Greeting {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private final long id;
-	private final String msg;
+	private long id;
+	private String msg;
 
 }

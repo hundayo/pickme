@@ -21,7 +21,6 @@ public class GreetingRepositoryTest {
 	Greeting greeting1;
 	Greeting greeting2;
 
-
 	@Before
 	public void setUp() throws Exception {
 		greeting1 = Greeting.builder().msg("Hello").build();
@@ -47,12 +46,19 @@ public class GreetingRepositoryTest {
 
 	@Test
 	public void findByMsg() throws Exception {
+		Greeting temp = greetingRepository.findByMsg(greeting2.getMsg());
 
+		assertNotNull(temp);
+		assertEquals(greeting2.getMsg(), temp.getMsg());
 	}
 
 	@Test
 	public void findByIdAndMsg() throws Exception {
+		Greeting temp = greetingRepository.findByIdAndMsg(greeting1.getId(), greeting1.getMsg());
 
+		assertNotNull(temp);
+		assertEquals(greeting1.getId(), temp.getId());
+		assertEquals(greeting1.getMsg(), temp.getMsg());
 	}
 
 }
