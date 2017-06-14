@@ -2,6 +2,7 @@
 *.jar
 .classpath
 .project
+**/application.properties
 
 pickme.iml
 
